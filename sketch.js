@@ -46,7 +46,7 @@ let dogs = [{
       cnv.parent("#canvasDiv");
 
       background(0, 0, 0);
-      textSize(36);
+      textSize(24);
       textFont('Courier new');
       textAlign(CENTER);
       textStyle(BOLD);
@@ -55,6 +55,8 @@ let dogs = [{
       frameRate(8);
 
       randomIndex = int(random(dogs.length));
+      text(dogs[randomIndex].name, 200, 200);
+
 
       startRandomizerButton = select('#randButton');
       startRandomizerButton.mousePressed(buttonPressed);
