@@ -54,8 +54,6 @@ let dogs = [{
       imageMode(CENTER);
       frameRate(8);
 
-      randomIndex = int(random(dogs.length));
-      text(dogs[randomIndex].name, 200, 200);
 
 
       startRandomizerButton = select('#randButton');
@@ -87,6 +85,13 @@ let dogs = [{
         fill(random(255), random(255), random(255), random(255));
         ellipse(random(width), random(height), random(200), random(50), random(170));
       }
+    }
+
+    function mousePressed() {
+      background(0);
+      randomIndex = int(random(dogs.length));
+      text(dogs[randomIndex].name, 200, 200);
+      dogs.splice(randomIndex, 1);
     }
 
     function addAnotherInput() {
