@@ -1,102 +1,103 @@
-let stereotype = [{
-  name: "Magsasaka (Farmer)",
-  color: "Sobrang Maitim",
-  description: "empty"
-}, {
-  name: "Mahirap (Poor)",
-  color: "Itim",
-  description: "empty"
-}, {
-  name: "Karpintero (Carpenter)",
-  color: "maitim",
-  description: "empty"
-}, {
-  name: "Sunog (Burnt)",
-  color: "pinakamaitim",
-  description: "empty"
-}, {
-  name: "May kaya (Middleclass)",
-  color: "Moreno",
-  description: "empty"
-}, {
-  name: "Ganda (Beautiful)",
-  color: "Puti",
-  description: "empty"
-}, {
-  name: "Mapera (Rich)",
-  color: "Lightskin",
-  description: "empty"
-}, {
-  name: "Artista (Celebrity)",
-  color: "white",
-  description: "empty"
-}];
-
-let randomIndex;
-let animating = false;
-let brown = [];
-
-function preload() {
-
-  for (let i = 0; i <= 7; i++) {
-
-    brown[i] = loadImage(`assets/brown_${i}.jpg`)
-  }
-
-}
-
-function setup() {
-  createCanvas(500, 500);
-  background(31, 12, 3);
-  textSize(15);
-  textAlign(CENTER);
-  textStyle(BOLD);
-  fill(255);
-
-  text("Learn More", 250, 250)
-
-
-}
-
-function draw() {
-
-  if (animating == true) {
-    noStroke();
-  fill(random(255), random(255), random(255), random(255));
-  ellipse(random(width), random(height), random(50, 200));
-
-  }
-}
-
-
-
-
-function randomizer() {
-  animating = false;
-
-  if (stereotype[0]) {
-    // this displays random name and splices it out of array
-    background(random(200, 255));
-    randomIndex = int(random(stereotype.length));
-    text(`${stereotype[randomIndex].name} common label: ${stereotype[randomIndex].color}`, 250, 250);
-    //text(stereotype[randomIndex].name + "'s common label: " + stereotype[randomIndex].color, 250, 250);
-    stereotype.splice(randomIndex, 1);
-  } else {
-    background(random(200, 255));
-    text("That's it!", 250, 250);
-  }
-
-}
-
-function mousePressed() {
-  animating = true;
-  setTimeout(randomizer, 1000);
-
-}
-
-
-
-
+// let stereotype = [{
+//   name: "Magsasaka (Farmer)",
+//   color: "Sobrang Maitim",
+//   image: "empty"
+// }, {
+//   name: "Mahirap (Poor)",
+//   color: "Itim",
+//   description: "empty"
+// }, {
+//   name: "Karpintero (Carpenter)",
+//   color: "maitim",
+//   description: "empty"
+// }, {
+//   name: "Sunog (Burnt)",
+//   color: "pinakamaitim",
+//   description: "empty"
+// }, {
+//   name: "May kaya (Middleclass)",
+//   color: "Moreno",
+//   description: "empty"
+// }, {
+//   name: "Ganda (Beautiful)",
+//   color: "Puti",
+//   description: "empty"
+// }, {
+//   name: "Mapera (Rich)",
+//   color: "Lightskin",
+//   description: "empty"
+// }, {
+//   name: "Artista (Celebrity)",
+//   color: "white",
+//   description: "empty"
+// }];
+//
+// let randomIndex;
+// let animating = false;
+// let brown = [];
+//
+// function preload() {
+//
+//   for (let i = 0; i <= 7; i++) {
+//
+//     brown[i] = loadImage(`assets/brown_${i}.jpg`);
+//   }
+//
+// }
+//
+// function setup() {
+//   createCanvas(500, 500);
+//   background(31, 12, 3);
+//   textSize(15);
+//   textAlign(CENTER);
+//   textStyle(BOLD);
+//   fill(255);
+//   text("Learn More", 250, 250)
+//   imageMode(CENTER);
+//   frameRate(24);
+//
+//
+// }
+//
+// function draw() {
+//
+//   if (animating == true) {
+//     noStroke();
+//     fill(random(255), random(255), random(255), random(255));
+//     ellipse(random(width), random(height), random(50, 200));
+//     fill(random(255), random(255), random(255), random(255));
+//     ellipse(random(width), random(height), random(50, 200));
+//
+//   }
+// }
+//
+//
+// function randomizer() {
+//   animating = false;
+//
+//   if (stereotype[0]) {
+//     // this displays random name and splices it out of array
+//     background(31, 12, 3);
+//     randomIndex = int(random(stereotype.length));
+//     text(`${stereotype[randomIndex].name} common label: ${stereotype[randomIndex].color}`, 250, 250);
+//     //text(stereotype[randomIndex].name + "'s common label: " + stereotype[randomIndex].color, 250, 250);
+//     stereotype.splice(randomIndex, 1);
+//   } else {
+//     background(random(200, 255));
+//     text("That's it!", 250, 250);
+//   }
+//
+// }
+//
+// function mousePressed() {
+//   animating = true;
+//   setTimeout(randomizer, 1000);
+//
+// }
+//
+//
+//
+//
 
 
 
