@@ -1,4 +1,4 @@
-html, body {
+html, body{
   margin: 0;
   padding: 0;
 }
@@ -10,7 +10,7 @@ margin: 50px auto;
 
 .randomizerButton {
   padding: 20px;
-  background-color: #28b08a;
+  background-color: #4d2600;
 }
 
 .row {
