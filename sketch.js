@@ -1,35 +1,35 @@
 let stereotype = [{
   name: "Magsasaka (Farmer)",
   color: "Sobrang Maitim",
-  description: "lol"
+  description: "empty"
 }, {
   name: "Mahirap (Poor)",
   color: "Itim",
-  description: "lol"
+  description: "empty"
 }, {
   name: "Karpintero (Carpenter)",
   color: "maitim",
-  description: "lol"
+  description: "empty"
 }, {
   name: "Sunog (Burnt)",
   color: "pinakamaitim",
-  description: "lol"
+  description: "empty"
 }, {
   name: "May kaya (Middleclass)",
   color: "Moreno",
-  description: "lol"
+  description: "empty"
 }, {
   name: "Ganda (Beautiful)",
   color: "Puti",
-  description: "lol"
+  description: "empty"
 }, {
   name: "Mapera (Rich)",
   color: "Lightskin",
-  description: "lol"
+  description: "empty"
 }, {
   name: "Artista (Celebrity)",
   color: "white",
-  description: "lol"
+  description: "empty"
 }];
 
 let randomIndex;
@@ -62,8 +62,8 @@ function draw() {
 
   if (animating == true) {
     noStroke();
-    fill(random(255), random(255), random(255), random(255));
-    ellipse(random(width), random(height), random(50, 200));
+  fill(random(255), random(255), random(255), random(255));
+  ellipse(random(width), random(height), random(50, 200));
 
   }
 }
